@@ -4,7 +4,7 @@ cask "cruft" do
 
   url "https://github.com/akatekhanh/cruft/releases/download/v#{version}/Cruft-macOS.zip"
   name "Cruft"
-  desc "Calm storage cleaner for macOS: scan by what you do, review by risk level, clean to the Trash"
+  desc "Calm storage cleaner: honest risk levels, cleans to the Trash"
   homepage "https://github.com/akatekhanh/cruft"
 
   livecheck do
@@ -12,7 +12,7 @@ cask "cruft" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Cruft.app"
 
@@ -22,14 +22,10 @@ cask "cruft" do
   ]
 
   caveats <<~EOS
-    Cruft is not notarized (that needs a paid Apple Developer account), so
-    macOS will refuse the first launch. Either right-click Cruft.app → Open,
-    or clear the quarantine flag:
+    Cruft is not notarized (that needs a paid Apple Developer account). If
+    macOS refuses the first launch, right-click Cruft.app → Open, or clear
+    the quarantine flag:
 
       xattr -d com.apple.quarantine "#{appdir}/Cruft.app"
-
-    Or reinstall with the flag never set:
-
-      brew reinstall --cask --no-quarantine cruft
   EOS
 end

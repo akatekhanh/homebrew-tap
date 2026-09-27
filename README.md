@@ -3,7 +3,9 @@
 Homebrew casks for [noddle.dev](https://noddle.dev) apps.
 
 ```sh
-brew install --cask akatekhanh/tap/cruft
+brew tap akatekhanh/tap
+brew trust akatekhanh/tap      # Homebrew 7+ requires this for third-party taps
+brew install --cask cruft
 ```
 
 | Cask | What it is |
