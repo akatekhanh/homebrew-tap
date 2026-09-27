@@ -1,6 +1,6 @@
 cask "cruft" do
   version "0.2.0"
-  sha256 "PLACEHOLDER"
+  sha256 "b4b294e147c4ca7438346fbb647a0f810c5a732718a37667ca84d8f9634da035"
 
   url "https://github.com/akatekhanh/cruft/releases/download/v#{version}/Cruft-macOS.zip"
   name "Cruft"
